@@ -12,18 +12,23 @@
         body {
             display: grid;
             /* background-color: grey; */
-            background-image: url(https://github.com/Joshtdale/silly-story-generator/blob/build/images/universal_monsters.jpg);
+            background-image: url(https://github.com/Joshtdale/silly-story-generator/blob/build/images/universal_monsters.jpg?raw=true);
             font-family: helvetica, sans-serif;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
             /* width: 350px; */
             /* height: 100vh; */
         }
 
         label {
-            font-weight: bold;  
+            font-weight: bold; 
+            color: white; 
         }
 
         div {
-            padding-bottom: 10px;
+            /* padding-bottom: 10px; */
         }
 
         input[type="text"] {
@@ -32,9 +37,9 @@
         }
 
         p {
-            background: black;
-            color: white;
-            opacity: 0.7;
+            background: white;
+            color: black;
+            opacity: 0.9;
             border-radius: 5px;
             padding: 10px;
             visibility: hidden;
@@ -43,9 +48,11 @@
 
         .mainContainer {
             display: grid;
+            /* background-color: white; */
             padding-top: 25vh;
             justify-items: center;
             align-items: center;
+            /* width: 50px; */
         }
 
     </style>
@@ -53,21 +60,24 @@
     </head>
 
     <body>
-        <div class="mainContainer">
-        <div>
-            <!-- <label for="customname">Enter custom name:</label> -->
-            <input id="customname" type="text" placeholder="Enter name">
-        </div>
-        <div>
-            <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
-            <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
-        </div>
-        <div>
-            <button class="randomize">Generate random story</button>
-        </div>
-        <p class="story"></p>
-    </div>
 
-    <script src="sandbox.js"></script>
+        <div class="mainContainer">
+            <div>
+                <!-- <label for="customname">Enter custom name:</label> -->
+                <input id="customname" type="text" placeholder="Enter name">
+            </div>
+            <div>
+                <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
+                <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
+            </div>
+            <div>
+                <button class="randomize">Generate random story</button>
+            </div>
+                <p class="story"></p>
+        </div>
+
+        <script src="sandbox.js"></script>
+        
     </body>
+    
 </html>
