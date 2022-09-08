@@ -18,7 +18,7 @@ const story = document.querySelector('.story');
         return array[random];
     }
 
-const storyText = "There is a house on my :insertx: that is :adverb: haunted. It's the old :inserty: place that's been :adjective: for hundreds of years. I can tell the house is :adjective: because there are :pluralNoun: and :adjective: :pluralNoun2: outside, and it smells like old :food:. I heard that a kid named Bob went inside and never came back out. My friends and I are :emotion: to :verb: past the house because it's so :adjective2:";
+const storyText = "There is a house on my :insertx: that is extremely haunted. It's the old :inserty: place that's been empty for hundreds of years. I can tell the house is haunted because there are corpses and :adjective: :pluralNoun2: outside, and it smells like old :food:. I heard that a kid named Bob went inside and never came back out. My friends and I are :emotion: to :verb: past the house because it's so :adjective2:";
 const insertX = ['street', 'block'];
 const insertY = ['Frankenstein', 'Dracula', 'Awesome Inc'];
 const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
@@ -41,20 +41,27 @@ randomize.addEventListener('click', result);
             newStory = newStory.replace('Bob', name);
         }
 
+
+        //changed placeholders to actual text
         if(customAdverb.value !== '') {
             const adverb = customAdverb.value;
-            newStory = newStory.replace(':adverb:', adverb);
+            newStory = newStory.replace('extremely', adverb);
         }
 
         //example of replaceAll replacing more than one substring
         if(customAdjective.value !== '') {
             const adjective = customAdjective.value;
-            newStory = newStory.replaceAll(':adjective:', adjective);
+            newStory = newStory.replaceAll('empty', adjective);
         }
 
         if(customPluralNoun.value !== '') {
             const pluralNoun = customPluralNoun.value;
-            newStory = newStory.replace(':pluralNoun:', pluralNoun);
+            newStory = newStory.replace('haunted', pluralNoun);
+        }
+
+        if(customPluralNoun.value !== '') {
+            const pluralNoun = customPluralNoun.value;
+            newStory = newStory.replace('corpses', pluralNoun);
         }
 
         if(customPluralNoun2.value !== '') {
