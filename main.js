@@ -29,17 +29,19 @@ randomize.addEventListener('click', result);
 
         if(customName.value !== '') {
             const name = customName.value;
-            newStory = newStory.replaceAll('Bob', name);
+            newStory = newStory.replace('Bob', name);
         }
 
 
         if(document.getElementById("uk").checked) {
-        const weight = Math.round(300 * 0.0714286, + ' stone');
+        const weight = Math.round(300 * 0.0714286) + ' stone';
         const temperature =  Math.round((94 - 32) * 5/9) + ' centigrade';
-        var newStory = newStory.replaceAll('94 fahrenheit', temperature);
-        var newStory = newStory.replaceAll('300 pounds', weight);
+        var newStory = newStory.replace('94 fahrenheit', temperature);
+        var newStory = newStory.replace('300 pounds', weight);
         };
 
         story.textContent = newStory;
         story.style.visibility = 'visible';
     };
+
+    // There is a house on my :noun: that is :adverb: haunted. It's the old :properNounLastname: place that's been adjective for hundreds of years. I can tell the house is :adjective: because there are :pluralNoun: and :adjective: :pluralNoun: outside, and it smells like old :nounFood:. I heard that a kid named 
