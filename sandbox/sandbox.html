@@ -33,6 +33,10 @@
         }
 
         input[type="text"] {
+            background-color: black;
+            border: solid white 1px;
+            color: white;
+            opacity: 0.9;
             padding: 5px;
             width: 150px;
         }
@@ -45,6 +49,11 @@
             padding: 10px;
             visibility: hidden;
             width: 50vw;
+        }
+
+        button {
+            background-color: red;
+            opacity: 0.9;
         }
 
         .mainContainer {
@@ -84,8 +93,8 @@
                 <input id="customAdjective2" type="text" placeholder="Adjective">
             </div>
             <div>
-                <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
-            <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
+                <label for="notScary">Not scary</label><input id="notScary" type="radio" name="ukus" value="us" checked>
+            <label for="scary">SCARY</label><input id="scary" type="radio" name="ukus" value="uk">
             </div>
             <div>
                 <button class="randomize">Generate random story</button>
